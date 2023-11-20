@@ -7,7 +7,7 @@
 input {
   padding: 10px;
   margin-right: 15px;
-  border: 1px solid #3498db; /* Blue color for illustration, choose your own */
+  border: 1px solid #3498db;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -17,22 +17,45 @@ button {
   padding: 10px 15px;
   border: none;
   color: white;
-  background-color: #2ecc71; /* Green color for illustration, choose your own */
+  background-color: #2ecc71;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
 
-/* List styling */
-ul {
-  list-style: none;
-  padding: 0;
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-li {
-  margin: 15px 0;
-  font-size: 18px;
-  position: relative;
+thead {
+  background-color: #3388c1;
+  color: rgb(0, 0, 0);
+}
+
+th {
+  padding: 12px;
+  border: 1px solid #138bdb;
+  text-align: left;
+  background-color: #3498db;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #3498db;
+  text-align: left;
+}
+
+/* Odd rows styling */
+tr:nth-child(odd) {
+  background-color: #ecf0f1; /* Light gray color for illustration, choose your own */
+}
+
+/* Even rows styling */
+tr:nth-child(even) {
+  background-color: #bdf0f2; /* Light green color for illustration, choose your own */
 }
 
 /* Delete button styling */
@@ -41,7 +64,7 @@ li {
   margin-left: 10px;
   border: none;
   color: white;
-  background-color: #e74c3c; /* Red color for illustration, choose your own */
+  background-color: #e74c3c;
   border-radius: 4px;
   padding: 8px 12px;
   cursor: pointer;
@@ -61,7 +84,7 @@ li {
   padding: 8px 12px;
   border: none;
   color: white;
-  background-color: #f39c12; /* Orange color for illustration, choose your own */
+  background-color: #f39c12;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;

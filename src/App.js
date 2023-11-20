@@ -9,8 +9,6 @@ function App() {
   const [showEdit, setShowEdit] = useState(-1);
   const [updatedText, setUpdatedText] = useState("");
 
-  // Helper Functions
-
   /* Adds a new item to the list array*/
   function addItem() {
     // ! Check for empty item
@@ -42,7 +40,7 @@ function App() {
     // Get the current item
     const currentItem = items.filter((item) => item.id === id);
 
-    // Create a new item with same id
+    // Create a new item with the same id
     const newItem = {
       id: currentItem.id,
       value: newText,
@@ -50,7 +48,7 @@ function App() {
 
     deleteItem(id);
 
-    // Replace item in the item list
+    // Replace the item in the item list
     setItems((oldList) => [...oldList, newItem]);
     setUpdatedText("");
     setShowEdit(-1);
@@ -73,37 +71,43 @@ function App() {
       {/* Add (button) */}
       <button onClick={() => addItem()}>Add</button>
 
-      {/* 3. List of todos (unordered list) */}
-      <ul>
-        {items.map((item) => {
-          return (
-            <div>
-              <li key={item.id} onClick={() => setShowEdit(item.id)}>
-                {item.value}
+      {/* 3. List of todos (table) */}
+      <table>
+        <thead>
+          <tr>
+            <th>Item List</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item) => (
+            <tr key={item.id}>
+              <td onClick={() => setShowEdit(item.id)}>{item.value}</td>
+              <td>
                 <button
                   className="delete-button"
                   onClick={() => deleteItem(item.id)}
                 >
                   ❌
                 </button>
-              </li>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-              {showEdit === item.id ? (
-                <div>
-                  <input
-                    type="text"
-                    value={updatedText}
-                    onChange={(e) => setUpdatedText(e.target.value)}
-                  />
-                  <button onClick={() => editItem(item.id, updatedText)}>
-                    Update
-                  </button>
-                </div>
-              ) : null}
-            </div>
-          );
-        })}
-      </ul>
+      {showEdit !== -1 && (
+        <div>
+          <input
+            type="text"
+            value={updatedText}
+            onChange={(e) => setUpdatedText(e.target.value)}
+          />
+          <button onClick={() => editItem(showEdit, updatedText)}>
+            Update
+          </button>
+        </div>
+      )}
     </div>
   );
 }
