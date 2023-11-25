@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 
 function TodoForm(props) {
+
   const [input, setInput] = useState(props.edit ? props.edit.value : "");
+  // 後面不接空字串是讓你update時可以直接根據本身的input text 做更改，若useState('')，則需要全部重新輸入
   const inputRef = useRef(null);
 
   useEffect(() => {
