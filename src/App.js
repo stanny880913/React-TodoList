@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./App.css";
 import TodoList from "./component/TodoList";
 function App() {

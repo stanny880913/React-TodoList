@@ -7,23 +7,21 @@
 }
 
 body {
-  background: linear-gradient(
-    90deg,
-    rgba(48, 16, 255, 1) 0%,
-    rgba(100, 115, 255, 1) 100%
-  );
+  background: #1e272e;
 }
+
 .todo-app {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   width: 520px;
   min-height: 600px;
-  background: #161a2b;
+  background: #3b4750;
   text-align: center;
   margin: 128px auto;
   border-radius: 10px;
   padding-bottom: 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 h1 {
@@ -44,15 +42,15 @@ h1 {
 .todo-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
+  border: 2px solid #718093; 
   outline: none;
   width: 320px;
-  background: transparent;
-  color: #fff;
+  background: #2f3640; 
+  color: #fff; 
 }
 
 .todo-input::placeholder {
-  color: #e2e2e2;
+  color: #718093;
 }
 
 .todo-button {
@@ -61,25 +59,18 @@ h1 {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
-  color: #fff;
+  background: #3b5998; 
+  color: #fff; 
   text-transform: capitalize;
 }
 
 .todo-input.edit {
-  border: 2px solid #149fff;
+  border: 2px solid rgb(183, 70, 39);
 }
 
 .todo-button.edit {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
+  background: #e74c3c; 
+  color: #fff;
   padding: 16px 22px;
 }
 
@@ -94,40 +85,24 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-  color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 118, 20, 1) 0%,
-    rgba(255, 84, 17, 1) 100%
-  );
-
+  color: #fff; /* 白色文字 */
+  background: #2f3640; /* 深灰色背景 */
   padding: 16px;
   border-radius: 5px;
   width: 90%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
 }
 
 .todo-row:nth-child(4n + 1) {
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
+  background: #3b5998; /* 深藍色背景 */
 }
 
 .todo-row:nth-child(4n + 2) {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 12, 241, 1) 0%,
-    rgba(250, 0, 135, 1) 100%
-  );
+  background: #9b59b6; /* 紫色背景 */
 }
 
 .todo-row:nth-child(4n + 3) {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
+  background: #e74c3c; /* 紅色背景 */
 }
 
 .icons {
@@ -139,9 +114,9 @@ h1 {
 
 .delete-icon {
   margin-right: 5px;
-  color: #fff;
+  color: #fff; /* 白色文字 */
 }
 
 .edit-icon {
-  color: #fff;
+  color: #fff; /* 白色文字 */
 }
